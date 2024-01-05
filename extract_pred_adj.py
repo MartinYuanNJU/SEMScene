@@ -1,7 +1,7 @@
 import joblib
 import numpy as np
 
-DATA_DIR = '../data_mscoco/data'
+DATA_DIR = './data_mscoco/data'
 subset = 'train'
 images_data_train = joblib.load(f"{DATA_DIR}/mscoco_{subset}2014_images_data.joblib")
 list_id = list(images_data_train.keys())
