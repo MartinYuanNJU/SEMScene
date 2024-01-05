@@ -12,3 +12,5 @@ python SEMScene/SEMScene.py
 ```
 # Pre-trained model and Evaluation
 For limited google drive space, we temporarily upload the pretrained models of Flickr30K, they can be downloaded from [flickr30k_pretrained_model](https://drive.google.com/drive/folders/1weVZduxLwtRn5Q6TBi3n6dBwN9AiUQao?usp=drive_link). Please modify the path in 24th row ```info_dict['checkpoint'] = None ``` of **SEMScene/Configuration.py** and delete the statement in 935th row ```trainer.train()``` of **SEMScene/SEMScene.py**, then run the **SEMScene/SEMScene.py** for evaluation:
+# Contact
+For any issue or comment, you can directly email me at [lyk208d80@gmail.com](lyk208d80@gmail.com)
