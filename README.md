@@ -1,5 +1,5 @@
 # SEMScene
-PyTorch implementation for SEMScene. SEMScene is an image-text retrieval method, which is built on top of the [LGSGM](https://github.com/m2man/LGSGM). The paper of this reasearch is currently under the review of **ACM TOMM**.
+PyTorch implementation for SEMScene. SEMScene is a scene-graph based image-text retrieval method. The paper of this reasearch is currently under the review of **ACM TOMM**.
 # Requirements
 For all used packages in the model, please refer to the ```requirements.txt```. The Python version is 3.11.4.
 # Data 
