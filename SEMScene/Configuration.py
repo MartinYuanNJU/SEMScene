@@ -25,7 +25,6 @@ info_dict['checkpoint'] = None
 info_dict['margin_matrix_loss'] = 0.35  # 0.35 for node, triplet; 0.2 for graph
 info_dict['rnn_numb_layers'] = 2
 info_dict['rnn_bidirectional'] = True
-info_dict['rnn_structure'] = 'GRU'  # LSTM, GRU
 info_dict['graph_emb_dim'] = info_dict['gcn_output_dim'] * 1
 info_dict['n_heads'] = 1  # for triplet
 info_dict['include_pred_ft'] = True
