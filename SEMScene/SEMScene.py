@@ -154,7 +154,8 @@ class Trainer():
                                                 numb_total_obj=TOTAL_IMG_OBJ, numb_total_pred=TOTAL_IMG_PRED,
                                                 init_weight_obj=init_embed_model_weight_img_obj,
                                                 init_weight_pred=init_embed_model_weight_img_pred,
-                                                include_pred_ft=self.include_pred_ft)
+                                                include_pred_ft=self.include_pred_ft,
+                                                network_structure=info_dict['model_name'].lower())
 
         self.embed_model_cap = md.WordEmbedding(numb_words=TOTAL_CAP_WORDS, embed_dim=self.unit_dim,
                                                 init_weight=init_embed_model_weight_cap, sparse=False)
