@@ -342,7 +342,7 @@ class ImageModel(nn.Module):
     def __init__(self, word_unit_dim=300, gcn_output_dim=300, gcn_hidden_dim=[300], numb_gcn_layers=5, batchnorm=True,
                  dropout=None, activate_fn='swish', visualft_structure='b0', visualft_feature_dim=1024,
                  fusion_output_dim=1024, numb_total_obj=150, numb_total_pred=50, init_weight_obj=None,
-                 init_weight_pred=None, include_pred_ft=True):
+                 init_weight_pred=None, include_pred_ft=True, network_structure='graph'):
 
         super(ImageModel, self).__init__()
         self.include_pred_ft = include_pred_ft
@@ -366,10 +366,13 @@ class ImageModel(nn.Module):
                                                            output_dim=visualft_feature_dim,
                                                            batchnorm=batchnorm,
                                                            activate_fn=activate_fn)
-        # self.visual_extract_pred_model = Visual_Feature(input_dim=effnet_dim,
-        #                                               output_dim=visualft_feature_dim,
-        #                                               batchnorm=batchnorm,
-        #                                               activate_fn=activate_fn)
+            
+        if network_structure == 'graph':
+            self.visual_extract_pred_model = Visual_Feature(input_dim=effnet_dim,
+                                                            output_dim=visualft_feature_dim,
+                                                            batchnorm=batchnorm,
+                                                            activate_fn=activate_fn)
+            
         # Fusion with word embedding
         self.fusion_obj_model = Fusion_Layer(visual_dim=visualft_feature_dim, word_dim=word_unit_dim,
                                              output_dim=fusion_output_dim,
