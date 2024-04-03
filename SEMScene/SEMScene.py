@@ -121,7 +121,10 @@ class Trainer():
         self.margin_matrix_loss = info_dict['margin_matrix_loss']
         self.rnn_numb_layers = info_dict['rnn_numb_layers']
         self.rnn_bidirectional = info_dict['rnn_bidirectional']
-        self.rnn_structure = info_dict['rnn_structure']
+        if info_dict['model_name'].lower() == 'graph':
+            self.rnn_structure = 'GRU'
+        else:
+            self.rnn_structure = 'LSTM'
         self.visual_backbone = info_dict['visual_backbone']
         self.visual_ft_dim = info_dict['visual_ft_dim']
         self.ge_dim = info_dict['graph_emb_dim']
