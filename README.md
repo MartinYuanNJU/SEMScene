@@ -1,5 +1,6 @@
-# SEMScene
-PyTorch implementation for SEMScene. SEMScene is a scene-graph based image-text retrieval method. The paper of this reasearch is currently under the review of **ACM TOMM**.
+# SEMScene: Semantic-Consistency Enhanced Multi-Level Scene Graph Matching for Image-Text Retrieval
+PyTorch implementation for SEMScene model. SEMScene is a scene-graph based image-text retrieval method. The paper of this reasearch has been accepted by ACM Transactions on Multimedia Computing, Communications, and Applications (ACM TOMM) entitled "SEMScene: Semantic-Consistency Enhanced Multi-Level Scene Graph Matching for Image-Text Retrieval".
+
 # Requirements
 For all used packages in the model, please refer to the ```requirements.txt```. The Python version is 3.11.4.
 # Data 
