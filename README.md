@@ -1,5 +1,5 @@
 # SEMScene: Semantic-Consistency Enhanced Multi-Level Scene Graph Matching for Image-Text Retrieval
-PyTorch implementation for SEMScene model. SEMScene is a scene-graph based image-text retrieval method. The paper of this reasearch has been accepted by ACM Transactions on Multimedia Computing, Communications, and Applications (ACM TOMM) entitled "SEMScene: Semantic-Consistency Enhanced Multi-Level Scene Graph Matching for Image-Text Retrieval".
+PyTorch implementation for SEMScene model. SEMScene is a scene-graph based image-text retrieval method. The paper of this reasearch has been accepted by *ACM Transactions on Multimedia Computing, Communications, and Applications (ACM TOMM)* entitled "SEMScene: Semantic-Consistency Enhanced Multi-Level Scene Graph Matching for Image-Text Retrieval". The paper has been accepted and is currently awaiting typesetting for publication.
 
 # Requirements
 For all used packages in the model, please refer to the ```requirements.txt```. The Python version is 3.11.4.
@@ -15,3 +15,20 @@ python SEMScene/SEMScene.py
 For limited google drive space, we temporarily upload the pretrained models of Flickr30K, they can be downloaded from [flickr30k_pretrained_model](https://drive.google.com/drive/folders/1weVZduxLwtRn5Q6TBi3n6dBwN9AiUQao?usp=drive_link). Please modify the path in the 24th row ```info_dict['checkpoint'] = None ``` of **SEMScene/Configuration.py** and delete the statement in the 935th row ```trainer.train()``` of **SEMScene/SEMScene.py**, then run the **SEMScene/SEMScene.py** for evaluation.
 # Contact
 For any issue or comment, you can directly email the authors at **lyk208d80@gmail.com** or **xiangyuan@stu.pku.edu.cn**.
+# Reference
+If you find our work helpful to your research, please cite our work as:
+```
+@article{10.1145/3664816,
+author = {Liu, Yuankun and Yuan, Xiang and Li, Haochen and Tan, Zhijie and Huang, Jinsong and Xiao, Jingjie and Li, Weiping and Mo, Tong},
+title = {SEMScene: Semantic-Consistency Enhanced Multi-Level Scene Graph Matching for Image-Text Retrieval},
+year = {2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {1551-6857},
+url = {https://doi.org/10.1145/3664816},
+doi = {10.1145/3664816},
+note = {Just Accepted},
+journal = {ACM Trans. Multimedia Comput. Commun. Appl.},
+month = {may}
+}
+```
