@@ -27,13 +27,13 @@ if info_dict['Datasets'].lower() == 'flickr30k':
 
     subset = 'train'
     images_data_train = joblib.load(f"{DATA_DIR}/flickr30k_{subset}_lowered_images_data_adj.joblib")
-    caps_data_train = joblib.load(f"{DATA_DIR}/flickr30k_{subset}_lowered_caps_data_adj (1).joblib")
+    caps_data_train = joblib.load(f"{DATA_DIR}/flickr30k_{subset}_lowered_caps_data_adj.joblib")
     img_cap_matching_idx_train = joblib.load(f"{DATA_DIR}/image_caption_matching_flickr_{subset}.joblib")
     cap_img_matching_idx_train = joblib.load(f"{DATA_DIR}/caption_image_matching_flickr_{subset}.joblib")
 
     subset = 'val'
     images_data_val = joblib.load(f"{DATA_DIR}/flickr30k_{subset}_lowered_images_data_adj.joblib")
-    caps_data_val = joblib.load(f"{DATA_DIR}/flickr30k_{subset}_lowered_caps_data_adj (1).joblib")
+    caps_data_val = joblib.load(f"{DATA_DIR}/flickr30k_{subset}_lowered_caps_data_adj.joblib")
     img_cap_matching_idx_val = joblib.load(f"{DATA_DIR}/image_caption_matching_flickr_{subset}.joblib")
     cap_img_matching_idx_val = joblib.load(f"{DATA_DIR}/caption_image_matching_flickr_{subset}.joblib")
 
