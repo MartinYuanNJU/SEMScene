@@ -5,7 +5,7 @@ PyTorch implementation for SEMScene model. SEMScene is a scene-graph based image
 For all used packages in the model, please refer to the ```requirements.txt```. The Python version is 3.11.4.
 # Data 
 Except for the uploaded basic data in this repository, the model still need basic data including adjacency matrix based on the connections of predicates and triplets of sentence extracted through leveraging the [SceneGraphParser](https://github.com/vacancy/SceneGraphParser), which can be obtained here: [flickr30k](https://drive.google.com/drive/folders/1W02ub0UtV6wE41v59qa9pfxArKGIMtvv?usp=drive_link) and [mscoco](https://drive.google.com/drive/folders/1c0NpqlR0PypWO2JT3FnRrvKDfZa5M0Wm?usp=drive_link). Please download and place them in the **data_flickr30k/data** and **data_mscoco/data** folders, respectively. Or you can extract them by editing the paths of original files in ```extract_pred_adj.py``` and ```sng_parser_process.ipynb```, then run them. The original files can be download from [here](https://drive.google.com/drive/folders/18OHy--6mqbmNLCeushpbKuEI6xlWSLuf?usp=drive_link). After extracting the triplets of sentence, please implement the **stemming** for them. <br/><br/>
-The visual features of objects and predicates are also needed, we follow [LGSGM](https://github.com/m2man/LGSGM) to use **EfficientNet-b5** to extract these features, you can find them here: [flickr30k_visual](https://drive.google.com/drive/folders/1IvlmTZ9wUpOVIr9MzPgWZB5aYTaTD0jn) and [mscoco_visual](https://drive.google.com/drive/folders/1Q1Msy6kV0pzZ7uxrDjDQW34Ta9CucI4i), the files storing all visual features after extraction are provided by [LGSGM](https://github.com/m2man/LGSGM), many thanks. Please download and place them in the **data_flickr30k** and **data_mscoco**, respectively.
+The visual features of objects and predicates are also needed, we follow [LGSGM](https://github.com/m2man/LGSGM) to use **EfficientNet-b5** to extract these features, you can find them here: [flickr30k_visual](https://drive.google.com/drive/folders/1IvlmTZ9wUpOVIr9MzPgWZB5aYTaTD0jn) and [mscoco_visual](https://drive.google.com/drive/folders/1Q1Msy6kV0pzZ7uxrDjDQW34Ta9CucI4i), the files storing all extracted visual features of Flickr30k and MSCOCO are provided by [LGSGM](https://github.com/m2man/LGSGM), many thanks. Please download and place them in the **data_flickr30k** and **data_mscoco**, respectively.
 # Training new models from scratch
 Please modify the hyper-parameters in **SEMScene/Configuration.py** according to their corresponding comments, and run:
 ```
@@ -29,6 +29,6 @@ url = {https://doi.org/10.1145/3664816},
 doi = {10.1145/3664816},
 note = {Just Accepted},
 journal = {ACM Trans. Multimedia Comput. Commun. Appl.},
-month = {may}
+month = {May}
 }
 ```
